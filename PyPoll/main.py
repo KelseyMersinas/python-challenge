@@ -41,9 +41,20 @@ with open(csvpath, encoding='UTF-8') as csvfile:
         winner = candidate[1]
     else:
         winner = candidate [2]
+    # print to terminal 
+    pgbrk = "-------------------------"
+    print("Election Results")
+    print(f"{pgbrk}")
+    print(f"Total votes: {total_votes}")
+    print(f"{pgbrk}")
+    print(f"{candidate[0]}: {percent_vote_candidate1:.3f}% ({votes_for_candidate1})")
+    print(f"{candidate[1]}: {percent_vote_candidate2:.3f}% ({votes_for_candidate2})")
+    print(f"{candidate[2]}: {percent_vote_candidate3:.3f}% ({votes_for_candidate3})")
+    print(f"{pgbrk}")
+    print(f"Winner: {winner}")
     
     # I referenced Xpert Learning to explain how to use the format funtion in f strings
-    pgbrk = "-------------------------"
+    #output to text file 
     output = (
         "Election Results\n\n"
         f"{pgbrk}\n\n"

@@ -45,6 +45,15 @@ with open(csvpath, encoding='UTF-8') as csvfile:
     
     average_change = (sum(list_of_change)/len(list_of_change))
 
+    # print the data findings to the terminal
+    print("Financial Analysis")
+    print("--------------------------")
+    print(f"Total Months: {total_months}")
+    print(f"Total: ${total_profit}")
+    print(f"Average Change: ${average_change:.2f}")
+    print(f"Greatest Increase in Profits: {max_month} (${max_change})")
+    print(f"Greatest Decrease in Profits: {min_month} (${min_change})")
+
     # output the data
     output = (
         "Financial Analysis\n\n"
